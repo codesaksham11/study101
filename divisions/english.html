@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Flashcards</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>English Flashcards</h1>
+        <div class="subcategory-list active">
+            <div class="category"><input type="checkbox" id="authors" data-file="../flashcards/authors-english.js"><label for="authors">Authors</label></div>
+            <div class="category"><input type="checkbox" id="word-meaning" data-file="../flashcards/word-meaning.js"><label for="word-meaning">Word Meaning</label></div>
+        </div>
+        <div id="flashcard-container"></div>
+        <div class="btn-group">
+            <button class="btn back-btn" onclick="window.location.href='../index.html'">Back</button>
+            <button class="btn flip-btn" id="flip-btn">Flip</button>
+            <button class="btn next-btn" id="next-btn">Next</button>
+        </div>
+    </div>
+    <script src="../flashcard-script.js"></script>
+</body>
+</html>
