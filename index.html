@@ -3,40 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flashcard Revision</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Flashcard Revision Hub</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #acb6e5);
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        .category {
+            margin: 10px 0;
+        }
+        .category-label {
+            font-size: 1.2em;
+            color: #444;
+            cursor: pointer;
+            padding: 10px;
+            display: block;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .category-label:hover {
+            background-color: #e0e0e0;
+        }
+        .subcategory-list {
+            margin-left: 20px;
+            display: none;
+        }
+        .subcategory-list.active {
+            display: block;
+        }
+        .subcategory {
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+        #start-btn {
+            display: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.3s;
+            margin: 20px auto;
+            display: block;
+        }
+        #start-btn.active {
+            display: block;
+        }
+        #start-btn:hover {
+            transform: scale(1.05);
+            background-color: #ff8a75;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1>Flashcard Revision Hub</h1>
-        <button id="start-btn" class="start-btn">Start</button>
+        <h1>Pick Your Battle</h1>
         <div class="categories">
+            <!-- Chemistry -->
             <div class="category">
-                <input type="checkbox" id="chem-check">
-                <label for="chem-check" class="category-label" data-href="divisions/chemistry.html">Chemistry</label>
+                <div class="category-label" data-target="chem-subs">Chemistry</div>
+                <div class="subcategory-list" id="chem-subs">
+                    <div class="subcategory"><input type="checkbox" id="chem-atomic-structure" data-file="flashcards/atomic-structure.js"><label for="chem-atomic-structure">Atomic Structure</label></div>
+                    <div class="subcategory"><input type="checkbox" id="chem-classification-of-elements" data-file="flashcards/classification-of-elements.js"><label for="chem-classification-of-elements">Classification of Elements</label></div>
+                    <div class="subcategory"><input type="checkbox" id="chem-chemical-bonding-and-shape" data-file="flashcards/chemical-bonding-and-shape.js"><label for="chem-chemical-bonding-and-shape">Chemical Bonding and Shape</label></div>
+                    <div class="subcategory"><input type="checkbox" id="chem-oxidation-reduction" data-file="flashcards/oxidation-reduction.js"><label for="chem-oxidation-reduction">Oxidation Reduction</label></div>
+                    <div class="subcategory"><input type="checkbox" id="chem-states-of-matter" data-file="flashcards/states-of-matter.js"><label for="chem-states-of-matter">States of Matter</label></div>
+                    <div class="subcategory"><input type="checkbox" id="chem-chemical-equilibrium" data-file="flashcards/chemical-equilibrium.js"><label for="chem-chemical-equilibrium">Chemical Equilibrium</label></div>
+                    <div class="subcategory"><input type="checkbox" id="chem-hydrogen" data-file="flashcards/hydrogen.js"><label for="chem-hydrogen">Hydrogen</label></div>
+                    <div class="subcategory"><input type="checkbox" id="chem-oxygen" data-file="flashcards/oxygen.js"><label for="chem-oxygen">Oxygen</label></div>
+                    <div class="subcategory"><input type="checkbox" id="chem-nitrogen" data-file="flashcards/nitrogen.js"><label for="chem-nitrogen">Nitrogen</label></div>
+                    <div class="subcategory"><input type="checkbox" id="chem-halogen" data-file="flashcards/halogen.js"><label for="chem-halogen">Halogen</label></div>
+                    <div class="subcategory"><input type="checkbox" id="chem-carbon" data-file="flashcards/carbon.js"><label for="chem-carbon">Carbon</label></div>
+                    <div class="subcategory"><input type="checkbox" id="chem-phosphorus" data-file="flashcards/phosphorus.js"><label for="chem-phosphorus">Phosphorus</label></div>
+                    <div class="subcategory"><input type="checkbox" id="chem-sulphur" data-file="flashcards/sulphur.js"><label for="chem-sulphur">Sulphur</label></div>
+                    <div class="subcategory"><input type="checkbox" id="chem-metallurgy" data-file="flashcards/metallurgy.js"><label for="chem-metallurgy">Metallurgy</label></div>
+                    <div class="subcategory"><input type="checkbox" id="chem-alkali-earth-metal" data-file="flashcards/alkali-earth-metal.js"><label for="chem-alkali-earth-metal">Alkali Earth Metal</label></div>
+                    <div class="subcategory"><input type="checkbox" id="chem-alkaline-earth-metal" data-file="flashcards/alkaline-earth-metal.js"><label for="chem-alkaline-earth-metal">Alkaline Earth Metal</label></div>
+                    <div class="subcategory"><input type="checkbox" id="chem-sodium-potassium-pump" data-file="flashcards/sodium-potassium-pump.js"><label for="chem-sodium-potassium-pump">Sodium Potassium Pump</label></div>
+                    <div class="subcategory"><input type="checkbox" id="chem-sodium-glucose-pump" data-file="flashcards/sodium-glucose-pump.js"><label for="chem-sodium-glucose-pump">Sodium Glucose Pump</label></div>
+                    <div class="subcategory"><input type="checkbox" id="chem-basic-inorganic" data-file="flashcards/basic-inorganic.js"><label for="chem-basic-inorganic">Basic Inorganic</label></div>
+                    <div class="subcategory"><input type="checkbox" id="chem-isomerism" data-file="flashcards/isomerism.js"><label for="chem-isomerism">Isomerism</label></div>
+                    <div class="subcategory"><input type="checkbox" id="chem-alkane" data-file="flashcards/alkane.js"><label for="chem-alkane">Alkane</label></div>
+                    <div class="subcategory"><input type="checkbox" id="chem-alkene" data-file="flashcards/alkene.js"><label for="chem-alkene">Alkene</label></div>
+                    <div class="subcategory"><input type="checkbox" id="chem-alkyne" data-file="flashcards/alkyne.js"><label for="chem-alkyne">Alkyne</label></div>
+                    <div class="subcategory"><input type="checkbox" id="chem-benzene" data-file="flashcards/benzene.js"><label for="chem-benzene">Benzene</label></div>
+                    <div class="subcategory"><input type="checkbox" id="chem-manufacturing-of-chemicals" data-file="flashcards/manufacturing-of-chemicals.js"><label for="chem-manufacturing-of-chemicals">Manufacturing of Chemicals</label></div>
+                    <div class="subcategory"><input type="checkbox" id="chem-fertilizer" data-file="flashcards/fertilizer.js"><label for="chem-fertilizer">Fertilizer</label></div>
+                    <div class="subcategory"><input type="checkbox" id="chem-foreign-element" data-file="flashcards/foreign-element.js"><label for="chem-foreign-element">Foreign Element</label></div>
+                </div>
             </div>
+            <!-- Physics -->
             <div class="category">
-                <input type="checkbox" id="phys-check">
-                <label for="phys-check" class="category-label" data-href="divisions/physics.html">Physics</label>
+                <div class="category-label" data-target="phys-subs">Physics</div>
+                <div class="subcategory-list" id="phys-subs">
+                    <div class="subcategory"><input type="checkbox" id="phys-kinematics" data-file="flashcards/kinematics.js"><label for="phys-kinematics">Kinematics</label></div>
+                    <div class="subcategory"><input type="checkbox" id="phys-dynamics" data-file="flashcards/dynamics.js"><label for="phys-dynamics">Dynamics</label></div>
+                    <!-- Add all Physics subdivisions here (shortened for brevity; full list in next step if needed) -->
+                </div>
             </div>
+            <!-- Nepali -->
             <div class="category">
-                <input type="checkbox" id="nepali-check">
-                <label for="nepali-check" class="category-label" data-href="divisions/nepali.html">Nepali</label>
+                <div class="category-label" data-target="nepali-subs">Nepali</div>
+                <div class="subcategory-list" id="nepali-subs">
+                    <div class="subcategory"><input type="checkbox" id="nepali-author" data-file="flashcards/author-nepali.js"><label for="nepali-author">Author</label></div>
+                </div>
             </div>
+            <!-- English -->
             <div class="category">
-                <input type="checkbox" id="eng-check">
-                <label for="eng-check" class="category-label" data-href="divisions/english.html">English</label>
+                <div class="category-label" data-target="eng-subs">English</div>
+                <div class="subcategory-list" id="eng-subs">
+                    <div class="subcategory"><input type="checkbox" id="eng-authors" data-file="flashcards/authors-english.js"><label for="eng-authors">Authors</label></div>
+                    <div class="subcategory"><input type="checkbox" id="eng-word-meaning" data-file="flashcards/word-meaning.js"><label for="eng-word-meaning">Word Meaning</label></div>
+                </div>
             </div>
+            <!-- Math -->
             <div class="category">
-                <input type="checkbox" id="math-check">
-                <label for="math-check" class="category-label" data-href="divisions/math.html">Math</label>
+                <div class="category-label" data-target="math-subs">Math</div>
+                <div class="subcategory-list" id="math-subs">
+                    <div class="subcategory"><input type="checkbox" id="math-logic-and-set" data-file="flashcards/logic-and-set.js"><label for="math-logic-and-set">Logic and Set</label></div>
+                    <!-- Add all Math subdivisions here (shortened for brevity) -->
+                </div>
             </div>
+            <!-- Biology -->
             <div class="category">
-                <input type="checkbox" id="bio-check">
-                <label for="bio-check" class="category-label" data-href="divisions/biology.html">Biology</label>
+                <div class="category-label" data-target="bio-subs">Biology</div>
+                <div class="subcategory-list" id="bio-subs">
+                    <div class="subcategory"><input type="checkbox" id="bio-bio-molecules" data-file="flashcards/bio-molecules.js"><label for="bio-bio-molecules">Bio Molecules</label></div>
+                    <!-- Add all Biology subdivisions here (shortened for brevity) -->
+                </div>
             </div>
         </div>
+        <button id="start-btn">Start</button>
     </div>
-    <script src="script.js"></script>
+    <script>
+        document.querySelectorAll('.category-label').forEach(label => {
+            label.addEventListener('click', () => {
+                const target = document.getElementById(label.getAttribute('data-target'));
+                target.classList.toggle('active');
+            });
+        });
+
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        const startBtn = document.getElementById('start-btn');
+
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                const checked = document.querySelectorAll('input[type="checkbox"]:checked');
+                startBtn.classList.toggle('active', checked.length > 0);
+            });
+        });
+
+        startBtn.addEventListener('click', () => {
+            const selectedFiles = Array.from(document.querySelectorAll('input[type="checkbox"]:checked'))
+                .map(cb => cb.getAttribute('data-file'));
+            window.location.href = `flashcards.html?files=${encodeURIComponent(JSON.stringify(selectedFiles))}`;
+        });
+    </script>
 </body>
 </html>
