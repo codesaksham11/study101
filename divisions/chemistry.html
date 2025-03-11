@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemistry Flashcards</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Chemistry Flashcards</h1>
+        <div class="subcategory-list active">
+            <div class="category"><input type="checkbox" id="atomic-structure" data-file="../flashcards/atomic-structure.js"><label for="atomic-structure">Atomic Structure</label></div>
+            <div class="category"><input type="checkbox" id="classification-of-elements" data-file="../flashcards/classification-of-elements.js"><label for="classification-of-elements">Classification of Elements</label></div>
+            <div class="category"><input type="checkbox" id="chemical-bonding-and-shape" data-file="../flashcards/chemical-bonding-and-shape.js"><label for="chemical-bonding-and-shape">Chemical Bonding and Shape</label></div>
+            <div class="category"><input type="checkbox" id="oxidation-reduction" data-file="../flashcards/oxidation-reduction.js"><label for="oxidation-reduction">Oxidation Reduction</label></div>
+            <div class="category"><input type="checkbox" id="states-of-matter" data-file="../flashcards/states-of-matter.js"><label for="states-of-matter">States of Matter</label></div>
+            <div class="category"><input type="checkbox" id="chemical-equilibrium" data-file="../flashcards/chemical-equilibrium.js"><label for="chemical-equilibrium">Chemical Equilibrium</label></div>
+            <div class="category"><input type="checkbox" id="hydrogen" data-file="../flashcards/hydrogen.js"><label for="hydrogen">Hydrogen</label></div>
+            <div class="category"><input type="checkbox" id="oxygen" data-file="../flashcards/oxygen.js"><label for="oxygen">Oxygen</label></div>
+            <div class="category"><input type="checkbox" id="nitrogen" data-file="../flashcards/nitrogen.js"><label for="nitrogen">Nitrogen</label></div>
+            <div class="category"><input type="checkbox" id="halogen" data-file="../flashcards/halogen.js"><label for="halogen">Halogen</label></div>
+            <div class="category"><input type="checkbox" id="carbon" data-file="../flashcards/carbon.js"><label for="carbon">Carbon</label></div>
+            <div class="category"><input type="checkbox" id="phosphorus" data-file="../flashcards/phosphorus.js"><label for="phosphorus">Phosphorus</label></div>
+            <div class="category"><input type="checkbox" id="sulphur" data-file="../flashcards/sulphur.js"><label for="sulphur">Sulphur</label></div>
+            <div class="category"><input type="checkbox" id="metallurgy" data-file="../flashcards/metallurgy.js"><label for="metallurgy">Metallurgy</label></div>
+            <div class="category"><input type="checkbox" id="alkali-earth-metal" data-file="../flashcards/alkali-earth-metal.js"><label for="alkali-earth-metal">Alkali Earth Metal</label></div>
+            <div class="category"><input type="checkbox" id="alkaline-earth-metal" data-file="../flashcards/alkaline-earth-metal.js"><label for="alkaline-earth-metal">Alkaline Earth Metal</label></div>
+            <div class="category"><input type="checkbox" id="sodium-potassium-pump" data-file="../flashcards/sodium-potassium-pump.js"><label for="sodium-potassium-pump">Sodium Potassium Pump</label></div>
+            <div class="category"><input type="checkbox" id="sodium-glucose-pump" data-file="../flashcards/sodium-glucose-pump.js"><label for="sodium-glucose-pump">Sodium Glucose Pump</label></div>
+            <div class="category"><input type="checkbox" id="basic-inorganic" data-file="../flashcards/basic-inorganic.js"><label for="basic-inorganic">Basic Inorganic</label></div>
+            <div class="category"><input type="checkbox" id="isomerism" data-file="../flashcards/isomerism.js"><label for="isomerism">Isomerism</label></div>
+            <div class="category"><input type="checkbox" id="alkane" data-file="../flashcards/alkane.js"><label for="alkane">Alkane</label></div>
+            <div class="category"><input type="checkbox" id="alkene" data-file="../flashcards/alkene.js"><label for="alkene">Alkene</label></div>
+            <div class="category"><input type="checkbox" id="alkyne" data-file="../flashcards/alkyne.js"><label for="alkyne">Alkyne</label></div>
+            <div class="category"><input type="checkbox" id="benzene" data-file="../flashcards/benzene.js"><label for="benzene">Benzene</label></div>
+            <div class="category"><input type="checkbox" id="manufacturing-of-chemicals" data-file="../flashcards/manufacturing-of-chemicals.js"><label for="manufacturing-of-chemicals">Manufacturing of Chemicals</label></div>
+            <div class="category"><input type="checkbox" id="fertilizer" data-file="../flashcards/fertilizer.js"><label for="fertilizer">Fertilizer</label></div>
+            <div class="category"><input type="checkbox" id="foreign-element" data-file="../flashcards/foreign-element.js"><label for="foreign-element">Foreign Element</label></div>
+        </div>
+        <div id="flashcard-container"></div>
+        <div class="btn-group">
+            <button class="btn back-btn" onclick="window.location.href='../index.html'">Back</button>
+            <button class="btn flip-btn" id="flip-btn">Flip</button>
+            <button class="btn next-btn" id="next-btn">Next</button>
+        </div>
+    </div>
+    <script src="../flashcard-script.js"></script>
+</body>
+</html>
