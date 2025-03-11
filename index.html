@@ -3,37 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flashcard Study</title>
+    <title>Flashcard Revision</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Flashcard Study Hub</h1>
-        
-        <!-- Subject Selection -->
-        <div id="selection-screen">
-            <button id="start-btn">Start</button>
-            <div id="subjects"></div>
-        </div>
-
-        <!-- Flashcard Display -->
-        <div id="flashcard-screen" class="hidden">
-            <div id="flashcard">
-                <div id="card-back" class="card-side"></div>
-                <div id="card-front" class="card-side hidden"></div>
+        <h1>Flashcard Revision Hub</h1>
+        <button id="start-btn" class="start-btn">Start</button>
+        <div class="categories">
+            <div class="category">
+                <input type="checkbox" id="chem-check">
+                <label for="chem-check" class="category-label" data-href="divisions/chemistry.html">Chemistry</label>
             </div>
-            <div class="buttons">
-                <button id="back-btn">Back</button>
-                <button id="flip-btn">Flip</button>
-                <button id="next-btn">Proceed</button>
+            <div class="category">
+                <input type="checkbox" id="phys-check">
+                <label for="phys-check" class="category-label" data-href="divisions/physics.html">Physics</label>
             </div>
-        </div>
-
-        <!-- Completion Message -->
-        <div id="completion-screen" class="hidden">
-            <div class="completion-box">
-                <h2>You are all set for today!</h2>
-                <button id="restart-btn">Restart</button>
+            <div class="category">
+                <input type="checkbox" id="nepali-check">
+                <label for="nepali-check" class="category-label" data-href="divisions/nepali.html">Nepali</label>
+            </div>
+            <div class="category">
+                <input type="checkbox" id="eng-check">
+                <label for="eng-check" class="category-label" data-href="divisions/english.html">English</label>
+            </div>
+            <div class="category">
+                <input type="checkbox" id="math-check">
+                <label for="math-check" class="category-label" data-href="divisions/math.html">Math</label>
+            </div>
+            <div class="category">
+                <input type="checkbox" id="bio-check">
+                <label for="bio-check" class="category-label" data-href="divisions/biology.html">Biology</label>
             </div>
         </div>
     </div>
