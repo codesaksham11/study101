@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biology Flashcards</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Biology Flashcards</h1>
+        <div class="subcategory-list active">
+            <div class="category"><input type="checkbox" id="bio-molecules" data-file="../flashcards/bio-molecules.js"><label for="bio-molecules">Bio Molecules</label></div>
+            <div class="category"><input type="checkbox" id="cell" data-file="../flashcards/cell.js"><label for="cell">Cell</label></div>
+            <div class="category"><input type="checkbox" id="fungi" data-file="../flashcards/fungi.js"><label for="fungi">Fungi</label></div>
+            <div class="category"><input type="checkbox" id="lichen" data-file="../flashcards/lichen.js"><label for="lichen">Lichen</label></div>
+            <div class="category"><input type="checkbox" id="algae" data-file="../flashcards/algae.js"><label for="algae">Algae</label></div>
+            <div class="category"><input type="checkbox" id="bryophyta" data-file="../flashcards/bryophyta.js"><label for="bryophyta">Bryophyta</label></div>
+            <div class="category"><input type="checkbox" id="pteridophytes" data-file="../flashcards/pteridophytes.js"><label for="pteridophytes">Pteridophytes</label></div>
+            <div class="category"><input type="checkbox" id="gymnosperm" data-file="../flashcards/gymnosperm.js"><label for="gymnosperm">Gymnosperm</label></div>
+            <div class="category"><input type="checkbox" id="angiosperms" data-file="../flashcards/angiosperms.js"><label for="angiosperms">Angiosperms</label></div>
+            <div class="category"><input type="checkbox" id="monera" data-file="../flashcards/monera.js"><label for="monera">Monera</label></div>
+            <div class="category"><input type="checkbox" id="virus" data-file="../flashcards/virus.js"><label for="virus">Virus</label></div>
+            <div class="category"><input type="checkbox" id="ecosystem" data-file="../flashcards/ecosystem.js"><label for="ecosystem">Ecosystem</label></div>
+            <div class="category"><input type="checkbox" id="ecological-adaptation" data-file="../flashcards/ecological-adaptation.js"><label for="ecological-adaptation">Ecological Adaptation</label></div>
+            <div class="category"><input type="checkbox" id="ecological-imbalances" data-file="../flashcards/ecological-imbalances.js"><label for="ecological-imbalances">Ecological Imbalances</label></div>
+            <div class="category"><input type="checkbox" id="vegetation" data-file="../flashcards/vegetation.js"><label for="vegetation">Vegetation</label></div>
+            <div class="category"><input type="checkbox" id="life-and-its-origin" data-file="../flashcards/life-and-its-origin.js"><label for="life-and-its-origin">Life and Its Origin</label></div>
+            <div class="category"><input type="checkbox" id="evidence-of-evolution" data-file="../flashcards/evidence-of-evolution.js"><label for="evidence-of-evolution">Evidence of Evolution</label></div>
+            <div class="category"><input type="checkbox" id="theories-of-evolution" data-file="../flashcards/theories-of-evolution.js"><label for="theories-of-evolution">Theories of Evolution</label></div>
+            <div class="category"><input type="checkbox" id="human-evolution" data-file="../flashcards/human-evolution.js"><label for="human-evolution">Human Evolution</label></div>
+            <div class="category"><input type="checkbox" id="protista" data-file="../flashcards/protista.js"><label for="protista">Protista</label></div>
+            <div class="category"><input type="checkbox" id="animlia" data-file="../flashcards/animlia.js"><label for="animlia">Animlia</label></div>
+            <div class="category"><input type="checkbox" id="earthworm" data-file="../flashcards/earthworm.js"><label for="earthworm">Earthworm</label></div>
+            <div class="category"><input type="checkbox" id="frog" data-file="../flashcards/frog.js"><label for="frog">Frog</label></div>
+            <div class="category"><input type="checkbox" id="animal-adaptation" data-file="../flashcards/animal-adaptation.js"><label for="animal-adaptation">Animal Adaptation</label></div>
+            <div class="category"><input type="checkbox" id="animal-behaviour" data-file="../flashcards/animal-behaviour.js"><label for="animal-behaviour">Animal Behaviour</label></div>
+            <div class="category"><input type="checkbox" id="environmental-pollution" data-file="../flashcards/environmental-pollution.js"><label for="environmental-pollution">Environmental Pollution</label></div>
+            <div class="category"><input type="checkbox" id="conservation-biology" data-file="../flashcards/conservation-biology.js"><label for="conservation-biology">Conservation Biology</label></div>
+            <div class="category"><input type="checkbox" id="wildlife" data-file="../flashcards/wildlife.js"><label for="wildlife">Wildlife</label></div>
+        </div>
+        <div id="flashcard-container"></div>
+        <div class="btn-group">
+            <button class="btn back-btn" onclick="window.location.href='../index.html'">Back</button>
+            <button class="btn flip-btn" id="flip-btn">Flip</button>
+            <button class="btn next-btn" id="next-btn">Next</button>
+        </div>
+    </div>
+    <script src="../flashcard-script.js"></script>
+</body>
+</html>
