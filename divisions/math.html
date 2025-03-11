@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Flashcards</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Math Flashcards</h1>
+        <div class="subcategory-list active">
+            <div class="category"><input type="checkbox" id="logic-and-set" data-file="../flashcards/logic-and-set.js"><label for="logic-and-set">Logic and Set</label></div>
+            <div class="category"><input type="checkbox" id="real-number" data-file="../flashcards/real-number.js"><label for="real-number">Real Number</label></div>
+            <div class="category"><input type="checkbox" id="function" data-file="../flashcards/function.js"><label for="function">Function</label></div>
+            <div class="category"><input type="checkbox" id="curve-sketching" data-file="../flashcards/curve-sketching.js"><label for="curve-sketching">Curve Sketching</label></div>
+            <div class="category"><input type="checkbox" id="sequence-and-series" data-file="../flashcards/sequence-and-series.js"><label for="sequence-and-series">Sequence and Series</label></div>
+            <div class="category"><input type="checkbox" id="matrix" data-file="../flashcards/matrix.js"><label for="matrix">Matrix</label></div>
+            <div class="category"><input type="checkbox" id="quadratic" data-file="../flashcards/quadratic.js"><label for="quadratic">Quadratic</label></div>
+            <div class="category"><input type="checkbox" id="complex-number" data-file="../flashcards/complex-number.js"><label for="complex-number">Complex Number</label></div>
+            <div class="category"><input type="checkbox" id="trigonometry" data-file="../flashcards/trigonometry.js"><label for="trigonometry">Trigonometry</label></div>
+            <div class="category"><input type="checkbox" id="analytical-geometry" data-file="../flashcards/analytical-geometry.js"><label for="analytical-geometry">Analytical Geometry</label></div>
+            <div class="category"><input type="checkbox" id="coordinate-in-space" data-file="../flashcards/coordinate-in-space.js"><label for="coordinate-in-space">Coordinate in Space</label></div>
+            <div class="category"><input type="checkbox" id="vectors" data-file="../flashcards/vectors.js"><label for="vectors">Vectors</label></div>
+            <div class="category"><input type="checkbox" id="statistics" data-file="../flashcards/statistics.js"><label for="statistics">Statistics</label></div>
+            <div class="category"><input type="checkbox" id="limit" data-file="../flashcards/limit.js"><label for="limit">Limit</label></div>
+            <div class="category"><input type="checkbox" id="derivative" data-file="../flashcards/derivative.js"><label for="derivative">Derivative</label></div>
+            <div class="category"><input type="checkbox" id="integration" data-file="../flashcards/integration.js"><label for="integration">Integration</label></div>
+            <div class="category"><input type="checkbox" id="numerical-computation" data-file="../flashcards/numerical-computation.js"><label for="numerical-computation">Numerical Computation</label></div>
+            <div class="category"><input type="checkbox" id="numerical-integration" data-file="../flashcards/numerical-integration.js"><label for="numerical-integration">Numerical Integration</label></div>
+            <div class="category"><input type="checkbox" id="dynamic" data-file="../flashcards/dynamic.js"><label for="dynamic">Dynamic</label></div>
+        </div>
+        <div id="flashcard-container"></div>
+        <div class="btn-group">
+            <button class="btn back-btn" onclick="window.location.href='../index.html'">Back</button>
+            <button class="btn flip-btn" id="flip-btn">Flip</button>
+            <button class="btn next-btn" id="next-btn">Next</button>
+        </div>
+    </div>
+    <script src="../flashcard-script.js"></script>
+</body>
+</html>
