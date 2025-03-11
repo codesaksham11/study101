@@ -1,147 +1,154 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Arial', sans-serif;
     background: linear-gradient(135deg, #74ebd5, #acb6e5);
     min-height: 100vh;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
 }
 
 .container {
     text-align: center;
     padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    color: #333;
     font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-#start-btn {
-    padding: 10px 20px;
+.start-btn {
+    padding: 15px 30px;
     font-size: 1.2em;
     background-color: #ff6f61;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     transition: transform 0.2s, background-color 0.3s;
 }
 
-#start-btn:hover {
+.start-btn:hover {
     transform: scale(1.05);
-    background-color: #ff8a80;
+    background-color: #ff8a75;
 }
 
-.subject {
+.categories {
+    margin-top: 20px;
+}
+
+.category {
     margin: 10px 0;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.category-label {
+    font-size: 1.2em;
+    color: #444;
     cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
     transition: background-color 0.3s;
+    flex-grow: 1;
 }
 
-.subject:hover {
-    background-color: rgba(255, 255, 255, 1);
+.category-label:hover {
+    background-color: #e0e0e0;
 }
 
-.subdivision {
+input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+.subcategory-list {
     margin-left: 20px;
-    padding: 5px;
     display: none;
 }
 
-.tick-box {
-    margin-right: 10px;
-    cursor: pointer;
+.subcategory-list.active {
+    display: block;
 }
 
-#flashcard {
+.flashcard {
     width: 400px;
-    height: 250px;
+    height: 300px;
     margin: 20px auto;
     perspective: 1000px;
     position: relative;
 }
 
-.card-side {
-    position: absolute;
+.card {
     width: 100%;
     height: 100%;
-    backface-visibility: hidden;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+    position: absolute;
+    transform-style: preserve-3d;
     transition: transform 0.6s;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-#card-back {
-    transform: rotateY(0deg);
-}
-
-#card-front {
+.card.flipped {
     transform: rotateY(180deg);
 }
 
-.flipped #card-back {
-    transform: rotateY(-180deg);
+.front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.flipped #card-front {
-    transform: rotateY(0deg);
+.front {
+    transform: rotateY(180deg);
 }
 
-.buttons button {
-    margin: 10px;
+.back {
+    background: #f9f9f9;
+}
+
+.btn-group {
+    margin-top: 20px;
+}
+
+.btn {
     padding: 10px 20px;
-    background-color: #4caf50;
-    color: white;
+    margin: 0 10px;
+    font-size: 1em;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-.buttons button:hover {
-    background-color: #66bb6a;
+.btn:hover {
+    opacity: 0.9;
 }
 
-.hidden {
-    display: none;
-}
+.back-btn { background-color: #3498db; color: white; }
+.flip-btn { background-color: #2ecc71; color: white; }
+.next-btn { background-color: #e67e22; color: white; }
 
-.completion-box {
-    background-color: #fff;
+.completed-box {
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.completion-box h2 {
-    color: #4caf50;
-}
-
-#restart-btn {
-    background-color: #ff6f61;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+    background: #2ecc71;
     color: white;
-    cursor: pointer;
-}
-
-#restart-btn:hover {
-    background-color: #ff8a80;
-}
-
-img {
-    max-width: 100%;
-    max-height: 100%;
+    border-radius: 10px;
+    font-size: 1.2em;
+    margin: 20px auto;
+    max-width: 400px;
 }
