@@ -1,0 +1,62 @@
+{
+    "Atomic structure": [],
+    "Classification of elements": [],
+    "Chemical bonding and shape": [],
+    "Oxidation reduction": [],
+    "States of matter": [],
+    "Chemical equilibrium": [],
+    "Hydrogen": [],
+    "Oxygen": [],
+    "Nitrogen": [],
+    "Halogen": [],
+    "Carbon": [],
+    "Phosphorus": [],
+    "Sulphur": [],
+    "Metallurgy": [],
+    "Alkali earth metal": [],
+    "Alkaline earth metal": [],
+    "Sodium postassium pump": [],
+    "Sodium glucose pump": [],
+    "Basic inorganic": [],
+    "Isomerism": [
+        {
+            "name": "types of physical isomerism",
+            "back": "Types of physical isomerism",
+            "front": "IMG_20250311_195242.jpg"
+        }
+    ],
+    "Alkane": [],
+    "Alkene": [
+        {
+            "name": "ethene preparation",
+            "back": "preparation methods of ethene",
+            "front": "IMG_20250311_195549.jpg"
+        }
+    ],
+    "Alkyne": [],
+    "Benzene": [],
+    "Manufacturing of chemicals": [],
+    "Fertilizer": [],
+    "Foreign element": [
+        {
+            "name": "nitogen detection",
+            "back": "detection of nitrogen as foreign element",
+            "front": "IMG_20250311_193207.jpg"
+        },
+        {
+            "name": "detection of sulphur and nitrogen",
+            "back": "detection of sulphur and nitrogen as a foreign element",
+            "front": "IMG_20250311_193240.jpg"
+        },
+        {
+            "name": "detection of chloride",
+            "back": "detection of chloride as a foreign element",
+            "front": "IMG_20250311_193606.jpg"
+        },
+        {
+            "name": "detection of iodine",
+            "back": "detection of iodine as a foreign element",
+            "front": "IMG_20250311_194836.jpg"
+        }
+    ]
+}
