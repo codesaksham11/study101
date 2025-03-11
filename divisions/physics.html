@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Flashcards</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Physics Flashcards</h1>
+        <div class="subcategory-list active">
+            <div class="category"><input type="checkbox" id="kinematics" data-file="../flashcards/kinematics.js"><label for="kinematics">Kinematics</label></div>
+            <div class="category"><input type="checkbox" id="dynamics" data-file="../flashcards/dynamics.js"><label for="dynamics">Dynamics</label></div>
+            <div class="category"><input type="checkbox" id="work-energy-and-power" data-file="../flashcards/work-energy-and-power.js"><label for="work-energy-and-power">Work Energy and Power</label></div>
+            <div class="category"><input type="checkbox" id="circular-motion" data-file="../flashcards/circular-motion.js"><label for="circular-motion">Circular Motion</label></div>
+            <div class="category"><input type="checkbox" id="gravitation" data-file="../flashcards/gravitation.js"><label for="gravitation">Gravitation</label></div>
+            <div class="category"><input type="checkbox" id="elasticity" data-file="../flashcards/elasticity.js"><label for="elasticity">Elasticity</label></div>
+            <div class="category"><input type="checkbox" id="heat-and-temperature" data-file="../flashcards/heat-and-temperature.js"><label for="heat-and-temperature">Heat and Temperature</label></div>
+            <div class="category"><input type="checkbox" id="thermal-expansion" data-file="../flashcards/thermal-expansion.js"><label for="thermal-expansion">Thermal Expansion</label></div>
+            <div class="category"><input type="checkbox" id="rate-of-heat-flow" data-file="../flashcards/rate-of-heat-flow.js"><label for="rate-of-heat-flow">Rate of Heat Flow</label></div>
+            <div class="category"><input type="checkbox" id="quantity-of-heat-energy" data-file="../flashcards/quantity-of-heat-energy.js"><label for="quantity-of-heat-energy">Quantity of Heat Energy</label></div>
+            <div class="category"><input type="checkbox" id="ideal-gas" data-file="../flashcards/ideal-gas.js"><label for="ideal-gas">Ideal Gas</label></div>
+            <div class="category"><input type="checkbox" id="reflection-of-curve-mirror" data-file="../flashcards/reflection-of-curve-mirror.js"><label for="reflection-of-curve-mirror">Reflection of Curve Mirror</label></div>
+            <div class="category"><input type="checkbox" id="refraction-and-plane-surface" data-file="../flashcards/refraction-and-plane-surface.js"><label for="refraction-and-plane-surface">Refraction and Plane Surface</label></div>
+            <div class="category"><input type="checkbox" id="refraction-through-prism" data-file="../flashcards/refraction-through-prism.js"><label for="refraction-through-prism">Refraction through Prism</label></div>
+            <div class="category"><input type="checkbox" id="lenses" data-file="../flashcards/lenses.js"><label for="lenses">Lenses</label></div>
+            <div class="category"><input type="checkbox" id="dispersion" data-file="../flashcards/dispersion.js"><label for="dispersion">Dispersion</label></div>
+            <div class="category"><input type="checkbox" id="electric-charge" data-file="../flashcards/electric-charge.js"><label for="electric-charge">Electric Charge</label></div>
+            <div class="category"><input type="checkbox" id="electric-field" data-file="../flashcards/electric-field.js"><label for="electric-field">Electric Field</label></div>
+            <div class="category"><input type="checkbox" id="potential-energy" data-file="../flashcards/potential-energy.js"><label for="potential-energy">Potential Energy</label></div>
+            <div class="category"><input type="checkbox" id="capacitor" data-file="../flashcards/capacitor.js"><label for="capacitor">Capacitor</label></div>
+            <div class="category"><input type="checkbox" id="nuclear-physics" data-file="../flashcards/nuclear-physics.js"><label for="nuclear-physics">Nuclear Physics</label></div>
+            <div class="category"><input type="checkbox" id="direct-current" data-file="../flashcards/direct-current.js"><label for="direct-current">Direct Current (DC)</label></div>
+            <div class="category"><input type="checkbox" id="solids" data-file="../flashcards/solids.js"><label for="solids">Solids</label></div>
+            <div class="category"><input type="checkbox" id="recent-trend-in-physics" data-file="../flashcards/recent-trend-in-physics.js"><label for="recent-trend-in-physics">Recent Trend in Physics</label></div>
+        </div>
+        <div id="flashcard-container"></div>
+        <div class="btn-group">
+            <button class="btn back-btn" onclick="window.location.href='../index.html'">Back</button>
+            <button class="btn flip-btn" id="flip-btn">Flip</button>
+            <button class="btn next-btn" id="next-btn">Next</button>
+        </div>
+    </div>
+    <script src="../flashcard-script.js"></script>
+</body>
+</html>
