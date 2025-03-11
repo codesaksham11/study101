@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard Master</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Flashcard Master</h1>
+        <button class="start-btn">Start Learning</button>
+        
+        <div class="subjects-grid">
+            <div class="subject-card">
+                <input type="checkbox" id="chem">
+                <label for="chem">Chemistry</label>
+                <div class="sub-topics" data-subject="chemistry"></div>
+            </div>
+            <div class="subject-card">
+                <input type="checkbox" id="phy">
+                <label for="phy">Physics</label>
+                <div class="sub-topics" data-subject="physics"></div>
+            </div>
+            <div class="subject-card">
+                <input type="checkbox" id="nep">
+                <label for="nep">Nepali</label>
+                <div class="sub-topics" data-subject="nepali"></div>
+            </div>
+            <div class="subject-card">
+                <input type="checkbox" id="eng">
+                <label for="eng">English</label>
+                <div class="sub-topics" data-subject="english"></div>
+            </div>
+            <div class="subject-card">
+                <input type="checkbox" id="math">
+                <label for="math">Math</label>
+                <div class="sub-topics" data-subject="math"></div>
+            </div>
+            <div class="subject-card">
+                <input type="checkbox" id="bio">
+                <label for="bio">Biology</label>
+                <div class="sub-topics" data-subject="biology"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard-container hidden">
+        <div class="flashcard">
+            <div class="card-back"></div>
+            <div class="card-front hidden"></div>
+        </div>
+        <div class="controls">
+            <button class="control-btn back">Back</button>
+            <button class="control-btn flip">Flip</button>
+            <button class="control-btn proceed">Next</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
