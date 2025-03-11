@@ -201,4 +201,50 @@
                     <div class="subcategory"><input type="checkbox" id="bio-monera" data-file="flashcards/monera.js"><label for="bio-monera">Monera</label></div>
                     <div class="subcategory"><input type="checkbox" id="bio-virus" data-file="flashcards/virus.js"><label for="bio-virus">Virus</label></div>
                     <div class="subcategory"><input type="checkbox" id="bio-ecosystem" data-file="flashcards/ecosystem.js"><label for="bio-ecosystem">Ecosystem</label></div>
-   
+   <div class="subcategory"><input type="checkbox" id="bio-ecological-adaptation" data-file="flashcards/ecological-adaptation.js"><label for="bio-ecological-adaptation">Ecological Adaptation</label></div>
+                    <div class="subcategory"><input type="checkbox" id="bio-ecological-imbalances" data-file="flashcards/ecological-imbalances.js"><label for="bio-ecological-imbalances">Ecological Imbalances</label></div>
+                    <div class="subcategory"><input type="checkbox" id="bio-vegetation" data-file="flashcards/vegetation.js"><label for="bio-vegetation">Vegetation</label></div>
+                    <div class="subcategory"><input type="checkbox" id="bio-life-and-its-origin" data-file="flashcards/life-and-its-origin.js"><label for="bio-life-and-its-origin">Life and Its Origin</label></div>
+                    <div class="subcategory"><input type="checkbox" id="bio-evidence-of-evolution" data-file="flashcards/evidence-of-evolution.js"><label for="bio-evidence-of-evolution">Evidence of Evolution</label></div>
+                    <div class="subcategory"><input type="checkbox" id="bio-theories-of-evolution" data-file="flashcards/theories-of-evolution.js"><label for="bio-theories-of-evolution">Theories of Evolution</label></div>
+                    <div class="subcategory"><input type="checkbox" id="bio-human-evolution" data-file="flashcards/human-evolution.js"><label for="bio-human-evolution">Human Evolution</label></div>
+                    <div class="subcategory"><input type="checkbox" id="bio-protista" data-file="flashcards/protista.js"><label for="bio-protista">Protista</label></div>
+                    <div class="subcategory"><input type="checkbox" id="bio-animlia" data-file="flashcards/animlia.js"><label for="bio-animlia">Animlia</label></div>
+                    <div class="subcategory"><input type="checkbox" id="bio-earthworm" data-file="flashcards/earthworm.js"><label for="bio-earthworm">Earthworm</label></div>
+                    <div class="subcategory"><input type="checkbox" id="bio-frog" data-file="flashcards/frog.js"><label for="bio-frog">Frog</label></div>
+                    <div class="subcategory"><input type="checkbox" id="bio-animal-adaptation" data-file="flashcards/animal-adaptation.js"><label for="bio-animal-adaptation">Animal Adaptation</label></div>
+                    <div class="subcategory"><input type="checkbox" id="bio-animal-behaviour" data-file="flashcards/animal-behaviour.js"><label for="bio-animal-behaviour">Animal Behaviour</label></div>
+                    <div class="subcategory"><input type="checkbox" id="bio-environmental-pollution" data-file="flashcards/environmental-pollution.js"><label for="bio-environmental-pollution">Environmental Pollution</label></div>
+                    <div class="subcategory"><input type="checkbox" id="bio-conservation-biology" data-file="flashcards/conservation-biology.js"><label for="bio-conservation-biology">Conservation Biology</label></div>
+                    <div class="subcategory"><input type="checkbox" id="bio-wildlife" data-file="flashcards/wildlife.js"><label for="bio-wildlife">Wildlife</label></div>
+                </div>
+            </div>
+        </div>
+        <button id="start-btn">Start</button>
+    </div>
+    <script>
+        document.querySelectorAll('.category-label').forEach(label => {
+            label.addEventListener('click', () => {
+                const target = document.getElementById(label.getAttribute('data-target'));
+                target.classList.toggle('active');
+            });
+        });
+
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        const startBtn = document.getElementById('start-btn');
+
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                const checked = document.querySelectorAll('input[type="checkbox"]:checked');
+                startBtn.classList.toggle('active', checked.length > 0);
+            });
+        });
+
+        startBtn.addEventListener('click', () => {
+            const selectedFiles = Array.from(document.querySelectorAll('input[type="checkbox"]:checked'))
+                .map(cb => cb.getAttribute('data-file'));
+            window.location.href = `flashcards.html?files=${encodeURIComponent(JSON.stringify(selectedFiles))}`;
+        });
+    </script>
+</body>
+</html>
