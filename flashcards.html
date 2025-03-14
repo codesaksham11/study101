@@ -57,6 +57,8 @@
             border-radius: 10px;
             padding: 20px;
             box-sizing: border-box;
+            text-align: left; /* Align text to left for readability */
+            overflow-y: auto; /* Scroll if text overflows */
         }
         .front {
             transform: rotateY(180deg);
@@ -133,7 +135,7 @@
             }
 
             const promises = selectedFiles.map(file => {
-                console.log(`Attempting to fetch: ${file}`); // Debug log
+                console.log(`Attempting to fetch: ${file}`);
                 return fetch(file)
                     .then(response => {
                         if (!response.ok) {
@@ -154,7 +156,7 @@
                         if (window.flashcardData) {
                             console.log(`Loaded ${window.flashcardData.length} cards from ${file}`);
                             flashcards = flashcards.concat(window.flashcardData);
-                            window.flashcardData = null; // Clear to avoid reuse
+                            window.flashcardData = null;
                         } else {
                             console.warn(`No flashcardData from ${file}`);
                         }
@@ -185,17 +187,20 @@
 
             cardIndex = Math.floor(Math.random() * flashcards.length);
             currentCard = flashcards[cardIndex];
-            const imgSrc = currentCard.front;
-            console.log(`Loading image from: ${imgSrc}`); // Debug image path
+            const frontContent = currentCard.front;
+            console.log(`Loading front content: ${frontContent}`);
+            const frontDisplay = typeof frontContent === 'string' && frontContent.startsWith('/images/')
+                ? `<img src="${frontContent}" alt="Flashcard Image" onerror="document.getElementById('error').textContent='Image not found: ${frontContent}'">`
+                : frontContent;
             container.innerHTML = `
                 <div class="flashcard">
                     <div class="card">
                         <div class="back">${currentCard.back}</div>
-                        <div class="front"><img src="${imgSrc}" alt="Flashcard Image" onload="console.log('Image loaded: ${imgSrc}')" onerror="document.getElementById('error').textContent='Image not found: ${imgSrc}'"></div>
+                        <div class="front">${frontDisplay}</div>
                     </div>
                 </div>
             `;
-            errorDiv.textContent = ''; // Clear previous errors
+            errorDiv.textContent = '';
         }
 
         function showNoCardsMessage() {
